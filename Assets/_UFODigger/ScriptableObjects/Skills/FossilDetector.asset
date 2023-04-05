@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a395e5df766cf6e4b98126117e43aa9e, type: 3}
+  m_Name: FossilDetector
+  m_EditorClassIdentifier: 
+  PlayerData: {fileID: 11400000, guid: 9d0a5a027cf781c44adc0b7a45c0ae3b, type: 2}
+  DetectorsCount: 0
+  LevelOfSkill: 0
+  BuyGemCost: 5
+  SkillImage: {fileID: 21300000, guid: 9894c4fd255c04950a9866b5f198cb0f, type: 3}
+  DetectorLevels:
+  - UpgradeGemCost: 0
+    Accuracy: 3
+  - UpgradeGemCost: 5
+    Accuracy: 6
+  - UpgradeGemCost: 10
+    Accuracy: 9
+  - UpgradeGemCost: 15
+    Accuracy: 12
+  - UpgradeGemCost: 20
+    Accuracy: 15
+  DetectorDiscription: Fossil detector
+  SaveKeyCount: FossilCount
+  SaveKeyLevel: FossilLv
+  OnSkillChange:
+    m_PersistentCalls:
+      m_Calls: []
+  Info: Allows you to detect the area where the part of the alien is buried

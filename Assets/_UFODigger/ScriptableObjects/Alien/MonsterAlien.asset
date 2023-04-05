@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 777e1d1f0056bc54db1f11873a91fcab, type: 3}
+  m_Name: MonsterAlien
+  m_EditorClassIdentifier: 
+  Name: Monster
+  Shot: {fileID: 21300000, guid: e753c0a06fb53454ea31b60ddde42c02, type: 3}
+  RarityIcon: {fileID: 21300000, guid: f1c48cdd48e5542fb9f4458094ab8fe6, type: 3}
+  Discriprion: Hunters, ruthless. This species does not recognize anyone other than
+    its own species, cold-blooded. They also have a very strong jaw and daggers in
+    place of their hands. It is better not to encounter such a visible once.
+  Size: 2
+  AlienPrefab: {fileID: 1554085916337138042, guid: 30e7492162b8f724aaffd0ea2ab9e20c, type: 3}
+  ExcavationPrice: 800
+  SellPrice: 2000
+  AllAlienParts: {fileID: 1554085916337138043, guid: 30e7492162b8f724aaffd0ea2ab9e20c, type: 3}
+  ExcavateLayerType: {fileID: 2971788251230480219, guid: 7c767e1a3b754f6429eae6a05750055b, type: 3}
+  LayersCount: 2
+  DuplicateChance: 0.5
+  IsAlienOpen: 0
+  IsAlienFirstTimeOpen: 0

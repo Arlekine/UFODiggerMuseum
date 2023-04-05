@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a6d110cd8f724c40864dcab04a96b2a, type: 3}
+  m_Name: StaminaDrink
+  m_EditorClassIdentifier: 
+  PlayerData: {fileID: 11400000, guid: 9d0a5a027cf781c44adc0b7a45c0ae3b, type: 2}
+  DrinkCount: 0
+  LevelOfSkill: 0
+  BuyGemCost: 5
+  SkillImage: {fileID: 21300000, guid: 28f3982025ae647c5bed966bc24e0472, type: 3}
+  StaminaDrinkLevels:
+  - UpgradeGemCost: 0
+    StaminaRecover: 5
+  - UpgradeGemCost: 5
+    StaminaRecover: 10
+  - UpgradeGemCost: 10
+    StaminaRecover: 15
+  - UpgradeGemCost: 15
+    StaminaRecover: 20
+  - UpgradeGemCost: 20
+    StaminaRecover: 25
+  DrinkDescription: Stamina drink
+  SaveKeyCount: StamCount
+  SaveKeyLevel: StamLvl
+  OnSkillChange:
+    m_PersistentCalls:
+      m_Calls: []
+  Info: Add turns

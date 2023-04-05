@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fa68a642530e9c47b14830149a3071c, type: 3}
+  m_Name: Drill
+  m_EditorClassIdentifier: 
+  StartLevelOfUpgrade: 0
+  OnLevelRise:
+    m_PersistentCalls:
+      m_Calls: []
+  PLayerData: {fileID: 11400000, guid: 9d0a5a027cf781c44adc0b7a45c0ae3b, type: 2}
+  LevelOfUpgrade: 0
+  InstrumentPowerDescription: {fileID: 21300000, guid: 97847316436bad04091aa0bf300866d2, type: 3}
+  Icon: {fileID: 21300000, guid: 33f5e0cda142fcc4393730cbbb85eaf4, type: 3}
+  Upgrades:
+  - GoldPrice: 0
+    GemPrice: 150
+    Power: 03000000
+  - GoldPrice: 100
+    GemPrice: 10
+    Power: 07000000
+  - GoldPrice: 250
+    GemPrice: 15
+    Power: 0a000000
+  UnlockInstrumentPrice: 150
+  IsInstrumentUnlockOnStart: 0
+  IsInstrumentUnlock: 0
+  SaveKey: DrillUP
+  SaveLockKey: DrillUnlock
+  Description: Powerful drill, but can only break one cell.

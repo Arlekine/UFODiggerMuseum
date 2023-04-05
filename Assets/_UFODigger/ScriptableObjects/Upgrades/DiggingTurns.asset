@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1778f8ac67dd42a4d9b18dd672dc67ca, type: 3}
+  m_Name: DiggingTurns
+  m_EditorClassIdentifier: 
+  StartPower: 10
+  OnLevelRise:
+    m_PersistentCalls:
+      m_Calls: []
+  PLayerData: {fileID: 11400000, guid: 9d0a5a027cf781c44adc0b7a45c0ae3b, type: 2}
+  Levels:
+  - GoldCost: 100
+    GemCost: 10
+    PowerUP: 2
+  - GoldCost: 250
+    GemCost: 25
+    PowerUP: 2
+  - GoldCost: 400
+    GemCost: 40
+    PowerUP: 3
+  - GoldCost: 600
+    GemCost: 55
+    PowerUP: 2
+  - GoldCost: 650
+    GemCost: 60
+    PowerUP: 1
+  SaveKey: DiggingUP
+  Description: Increases the number of moves in excavation.

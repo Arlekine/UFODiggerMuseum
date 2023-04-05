@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "715269711627",
+    "project_id": "ufo-digger",
+    "storage_bucket": "ufo-digger.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:715269711627:android:141c6fd6985e3b6d48240e",
+        "android_client_info": {
+          "package_name": "greenfroggames.ufo.diggers"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "715269711627-s9iu83ic611gdis8qbdb6034h5dq1fk6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkPnGtSx4DBfVuIRICbMGBIwJCLaLbnQA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "715269711627-s9iu83ic611gdis8qbdb6034h5dq1fk6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Wiki_en-US
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en-US
+  m_SharedData: {fileID: 11400000, guid: 6994c98aada591d4a82280f658017fcf, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 123764928512
+    m_Localized: Alien WIKI
+    m_Metadata:
+      m_Items: []
+  - m_Id: 261413597184
+    m_Localized: aliens open
+    m_Metadata:
+      m_Items: []
+  - m_Id: 509674450944
+    m_Localized: Bug
+    m_Metadata:
+      m_Items: []
+  - m_Id: 512870510592
+    m_Localized: Bugster
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11886346563584
+    m_Localized: 'Scott chose not to show the full Alien for most of the film, keeping
+      most of its body in shadow to create a sense of terror and heighten suspense.
+      The audience could thus project their own fears into imagining what the rest
+      of the creature might look like:[22] "Every movement is going to be very slow,
+      very graceful, and the Alien will alter shape so you never really know exactly
+      what he looks like."[24] Scott said:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13011175010304
+    m_Localized: In ufology, Nordic aliens are humanoid extraterrestrials purported
+      to come from the Pleiades who resemble Nordic-Scandinavians.[1] Professed contactees
+      describe them as being six to seven feet tall (about two meters) with long
+      blonde hair, blue eyes,[2] and fair skin.[3][2][4] Ufologist George Adamski
+      is credited with being among the first to claim contact with Nordic aliens
+      in the mid 1950s, and scholars note that the mythology of extraterrestrial
+      visitation from beings with features described as Aryan often include claims
+      of telepathy, benevolence, and physical beauty.[5][6][1]
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1

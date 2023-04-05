@@ -1,0 +1,127 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: UI Text Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: UI Text
+  m_TableCollectionNameGuidString: 608d528d5abe9d74e942a3fe1bbbf4e5
+  m_Entries:
+  - m_Id: 802164240384
+    m_Key: Setting Label
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2662057046016
+    m_Key: Music And Sound On
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2824695377920
+    m_Key: Music And Sound Off
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2904336822272
+    m_Key: Music Setting Label
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3005708955648
+    m_Key: Souns Setting Label
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3100189847552
+    m_Key: Language Setting Label
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3283074084864
+    m_Key: Language Setting Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3410606092288
+    m_Key: Graphics Setting Label
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3590768226304
+    m_Key: Graphics Low
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3727754194944
+    m_Key: Graphics Middle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3791218208768
+    m_Key: Graphics High
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3900270112768
+    m_Key: Rate App Label
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4079622746112
+    m_Key: Rate App Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2239562775982080
+    m_Key: Shop label
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2239667289649152
+    m_Key: Subscribe label
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2239748180996096
+    m_Key: Gems Label
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2240010836701184
+    m_Key: Sprcial Deal label
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2240178793410560
+    m_Key: Best deal label
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2534789004849152
+    m_Key: gem1 Price
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2534898778173440
+    m_Key: gem2 Price
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2534980256722944
+    m_Key: gem3 Price
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2535022795354112
+    m_Key: gem4 Price
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2535086259367936
+    m_Key: gem5 Price
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2538545561923584
+    m_Key: Subs description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2540114076430336
+    m_Key: Subs price
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    id: 0
+  references:
+    version: 1
+    00000000:
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1633706378675

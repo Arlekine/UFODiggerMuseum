@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 777e1d1f0056bc54db1f11873a91fcab, type: 3}
+  m_Name: Horse
+  m_EditorClassIdentifier: 
+  Name: Horse
+  Shot: {fileID: 21300000, guid: 25c937f4e476fdc42b326f773386446c, type: 3}
+  RarityIcon: {fileID: 21300000, guid: a5efbfb5357c44371856d8a5f1b92dee, type: 3}
+  Discriprion: This species belongs to the artiodactyl species. Not social, do not
+    like new acquaintances. Avoid other species, do not attack, but only defend themselves.
+    Very fast and agile.
+  Size: 1
+  AlienPrefab: {fileID: 1554085916337138042, guid: acfc47d8793932f41aeec2ad4dc99ae3, type: 3}
+  ExcavationPrice: 450
+  SellPrice: 1200
+  AllAlienParts: {fileID: 1554085916337138043, guid: acfc47d8793932f41aeec2ad4dc99ae3, type: 3}
+  ExcavateLayerType: {fileID: 2971788251230480219, guid: 7f0c3d9bac47dfe4095ef99427c7d080, type: 3}
+  LayersCount: 2
+  DuplicateChance: 0.5
+  IsAlienOpen: 0
+  IsAlienFirstTimeOpen: 0

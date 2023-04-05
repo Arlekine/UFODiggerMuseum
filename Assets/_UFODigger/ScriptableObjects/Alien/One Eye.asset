@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 777e1d1f0056bc54db1f11873a91fcab, type: 3}
+  m_Name: One Eye
+  m_EditorClassIdentifier: 
+  Name: "\u0421yclops"
+  Shot: {fileID: 21300000, guid: dc9724a98046ace49ae9d2ff3a95046d, type: 3}
+  RarityIcon: {fileID: 21300000, guid: 7634322913b854144a677d48ed1a3a9a, type: 3}
+  Discriprion: Very kind and friendly looking. They try to befriend everyone. They
+    are very perceptive and feel danger for a kilometer. In addition, they are very
+    lazy, it is not about them to work.
+  Size: 0
+  AlienPrefab: {fileID: 1554085916337138042, guid: 265c955cfd7fdd346a1eef4af1169d2c, type: 3}
+  ExcavationPrice: 600
+  SellPrice: 1000
+  AllAlienParts: {fileID: 1554085916337138043, guid: 265c955cfd7fdd346a1eef4af1169d2c, type: 3}
+  ExcavateLayerType: {fileID: 2971788251230480219, guid: 7744d9c648f49214cb2d2545f013c20f, type: 3}
+  LayersCount: 1
+  DuplicateChance: 0.4
+  IsAlienOpen: 0
+  IsAlienFirstTimeOpen: 0
