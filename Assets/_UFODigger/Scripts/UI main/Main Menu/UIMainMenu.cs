@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,9 +12,14 @@ public class UIMainMenu : MonoBehaviour
     public Sprite UnavailableBack;
     public Color _activeColor, _deactivColor;
     public GameObject Preview;
-    private Animation _animation;
 
-    public RectTransform _settingsButton;
+    [Space]
+    public RectTransform settingsButton;
+    public float buttonShowPos;
+    public float buttonHidePos;
+    public float buttonAnimateTime;
+    
+    private Animation _animation;
 
     private void Start()
     {
@@ -58,11 +64,15 @@ public class UIMainMenu : MonoBehaviour
     {
         if (_animation != null)
             _animation.Play("Main Menu Show");
+
+        settingsButton.DOAnchorPosY(buttonShowPos, buttonAnimateTime);
     }
 
     public void HideMainMenu()
     {
         if (_animation != null)
             _animation.Play("Main Menu Hide");
+
+        settingsButton.DOAnchorPosY(buttonHidePos, buttonAnimateTime);
     }
 }

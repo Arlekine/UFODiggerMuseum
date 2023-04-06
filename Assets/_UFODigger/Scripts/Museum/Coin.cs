@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using MoreMountains.NiceVibrations;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Coin : MonoBehaviour
 {
@@ -22,6 +24,9 @@ public class Coin : MonoBehaviour
     private GameObject _vfx;
 
     private bool _isMoveFinished = true;
+
+    private PointerEventData _pointerEventData = new PointerEventData(EventSystem.current);
+    private List<RaycastResult> _touchResults = new List<RaycastResult>();
 
     private CoinsCollector _coinsCollector;
     private void Start()
@@ -69,6 +74,20 @@ public class Coin : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+            return;
+
+        foreach (var touch in Input.touches)
+        {
+            if (touch.phase == TouchPhase.Began)
+            {
+                if (IsAboveUI(touch.position))
+                {
+                    return;
+                }
+            }
+        }
+
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, CollectRadius);
         if (UISettingsVibro._vibroStatus)
         {
@@ -82,6 +101,13 @@ public class Coin : MonoBehaviour
                 coin.Collect();
             }
         }
+    }
+
+    private bool IsAboveUI(Vector2 touchPos)
+    {
+        _pointerEventData.position = touchPos;
+        EventSystem.current.RaycastAll(_pointerEventData, _touchResults);
+        return _touchResults.Count > 0;
     }
 
     public void Collect()

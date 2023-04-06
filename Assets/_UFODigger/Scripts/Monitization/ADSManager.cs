@@ -6,6 +6,7 @@ using Utils;
 public class ADSManager : MonoBehaviour 
 {
     [SerializeField] private PlayerExcavationTurns _playerExcavationTurns;
+    [SerializeField] private Excavation _excavation;
     [SerializeField] private int _giftTurnForAds;
     [SerializeField] private Bus _bus;
     [SerializeField] private GiftController _giftController;
@@ -14,7 +15,8 @@ public class ADSManager : MonoBehaviour
     {
         noReward = -1,
         visitor,
-        excavationTurns
+        excavationTurns,
+        Bomb
     };
 
     private RewordTypes _rewordType = RewordTypes.noReward;
@@ -72,6 +74,14 @@ public class ADSManager : MonoBehaviour
                 //AppsFlyerManager.instance.AdPlacement("Add turns in excavation");
                 if (_playerExcavationTurns != null)
                     _playerExcavationTurns.AddTurns(_giftTurnForAds);
+                break;
+            case RewordTypes.Bomb:
+
+                Debug.Log("Add bomb");
+
+                if (_excavation != null)
+                    _excavation.SetDinamite();
+
                 break;
             default:
                 Debug.LogWarning("Nothing to reword!");

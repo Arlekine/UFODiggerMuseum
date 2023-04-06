@@ -75,6 +75,12 @@ public class Excavation : Singleton<Excavation>
 
     }
 
+    [EditorButton]
+    public void SetDinamite()
+    {
+        _playerInstrument.SetInstrumentOnOneTurn();
+    }
+
     private bool IsAboveUI(Vector2 touchPos)
     {
         _pointerEventData.position = touchPos;

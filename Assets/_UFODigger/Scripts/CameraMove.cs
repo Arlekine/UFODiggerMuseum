@@ -4,7 +4,8 @@ using Utils;
 
 public class CameraMove : Singleton<CameraMove>
 {
-    [SerializeField] private float _speed = 2.0f;
+    [SerializeField] private float _lerpParameter = 2.0f;
+    [SerializeField] private float _moveSensivity = 2.0f;
     [SerializeField] private float _timeForMove = 0.5f;
     [SerializeField] private Camera _camera;
 
@@ -101,7 +102,7 @@ public class CameraMove : Singleton<CameraMove>
         if (_dragging)
         {
             _camera.transform.position =
-                Vector3.MoveTowards(_camera.transform.position, _targetPosition, Time.deltaTime * _speed);
+                Vector3.Lerp(_camera.transform.position, _targetPosition, Time.deltaTime * _lerpParameter);
 
             CheckCameraPosition();
 
@@ -156,7 +157,7 @@ public class CameraMove : Singleton<CameraMove>
         //inversion of camera controll
         direction = direction * -1;
 
-        _targetPosition = _cameraPosition + direction;
+        _targetPosition = _cameraPosition + direction * _moveSensivity;
     }
 
     public void Save()

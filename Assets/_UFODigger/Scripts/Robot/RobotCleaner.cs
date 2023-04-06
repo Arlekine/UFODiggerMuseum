@@ -27,7 +27,7 @@ public class RobotCleaner : MonoBehaviour
 
     private void Start()
     {
-        if (RobotData.IsInstrumentUnlock && !_IsRobotStart)
+        /*if (RobotData.IsInstrumentUnlock && !_IsRobotStart)
         {
             _IsRobotStart = true;
             SetupStates();
@@ -37,12 +37,12 @@ public class RobotCleaner : MonoBehaviour
             _navMeshAgent.speed = RobotData.Upgrades[RobotData.LevelOfUpgrade].Power[0];
         }
 
-        RobotData.OnLevelRise.AddListener(OnRobotUpgrade);
+        RobotData.OnLevelRise.AddListener(OnRobotUpgrade);*/
     }
 
     private void OnRobotUpgrade()
     {
-        if (RobotData.IsInstrumentUnlock && !_IsRobotStart)
+        /*if (RobotData.IsInstrumentUnlock && !_IsRobotStart)
         {
             _IsRobotStart = true;
             SetupStates();
@@ -50,7 +50,18 @@ public class RobotCleaner : MonoBehaviour
             Collider.enabled = true;
         }
 
-        _navMeshAgent.speed = (RobotData.Upgrades[RobotData.LevelOfUpgrade].Power[0]); //power = speed
+        _navMeshAgent.speed = (RobotData.Upgrades[RobotData.LevelOfUpgrade].Power[0]); //power = speed*/
+    }
+
+    [EditorButton]
+    public void StartRobot()
+    {
+        _IsRobotStart = true;
+        SetupStates();
+        Robot.SetActive(true);
+        Collider.enabled = true;
+
+        _navMeshAgent.speed = (RobotData.Upgrades[RobotData.LevelOfUpgrade].Power[0]);
     }
 
     private void SetupStates()
@@ -86,6 +97,7 @@ public class RobotCleaner : MonoBehaviour
         }
     }
 
+    [EditorButton]
     public void SetTargetStand(Stand randomStand)
     {
         TargetStand = randomStand;

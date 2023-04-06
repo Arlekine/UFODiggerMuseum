@@ -11,6 +11,7 @@ public class PlayerExcavationTurns : MonoBehaviour
     [SerializeField] private PLayerData _playerData;
     [SerializeField] private PlayerTurnsUI _playerTurnsUI;
     [SerializeField] private Excavation _excavation;
+    [SerializeField] private GameObject _giftButton;
 
     [SerializeField] private StaminaDrinkSo _staminaDrinkSo;
     [SerializeField] private UISkillsBag _skillsBag;
@@ -54,6 +55,7 @@ public class PlayerExcavationTurns : MonoBehaviour
 
     public void EndExcavate()
     {
+        _giftButton.SetActive(false);
         ExcavateComplete.CompleteExcavate();
         CanExcavate = false;
     }

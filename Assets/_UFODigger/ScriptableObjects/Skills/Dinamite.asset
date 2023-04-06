@@ -23,13 +23,13 @@ MonoBehaviour:
   Upgrades:
   - GoldPrice: 0
     GemPrice: 0
-    Power: 0a000000
+    Power: 07000000
   - GoldPrice: 0
     GemPrice: 10
-    Power: 10000000
+    Power: 07000000
   - GoldPrice: 0
     GemPrice: 15
-    Power: 16000000
+    Power: 07000000
   UnlockInstrumentPrice: 0
   IsInstrumentUnlockOnStart: 1
   IsInstrumentUnlock: 1

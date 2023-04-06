@@ -47,8 +47,6 @@ public class ExcavateComplete : MonoBehaviour
 
             _playerTurnsUI.HideGiftOffer();
 
-            dSManager.ShowInterstitialAds();
-
             //AppMetricaManager.instance.LevelProgress(_levelNum, "Win");
             StartCoroutine(DelayBeforeMoveToNewScene(DelayBeforeWin));
         }
@@ -64,6 +62,11 @@ public class ExcavateComplete : MonoBehaviour
     IEnumerator DelayBeforeMoveToNewScene(float delay)
     {
         yield return new WaitForSeconds(delay);
+
+        dSManager.ShowInterstitialAds();
+
+        yield return new WaitForSeconds(0.3f);
+
         SceneManager.LoadScene(3);
     }
 }

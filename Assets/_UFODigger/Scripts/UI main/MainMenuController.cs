@@ -8,6 +8,7 @@ public class MainMenuController : Singleton<MainMenuController>
     public GameObject MainMenu;
     public GameObject StandsMenu;
     public GameObject AlienMenu;
+    public GameObject SettingsButton;
 
     public UISettings SettingsMenu;
     public ShopManager ShopMenu;
@@ -25,6 +26,7 @@ public class MainMenuController : Singleton<MainMenuController>
     public void ShowMainMenu()
     {
         MainMenu.SetActive(true);
+        SettingsButton.SetActive(true);
         StandsMenu.SetActive(false);
         AlienMenu.SetActive(false);
 
@@ -40,6 +42,7 @@ public class MainMenuController : Singleton<MainMenuController>
     public void ShowStandsMenu()
     {
         MainMenu.SetActive(false);
+        SettingsButton.SetActive(false);
         StandsMenu.SetActive(true);
         AlienMenu.SetActive(false);
 
@@ -68,6 +71,7 @@ public class MainMenuController : Singleton<MainMenuController>
         //}
 
         MainMenu.SetActive(false);
+        SettingsButton.SetActive(false);
         StandsMenu.SetActive(false);
         AlienMenu.SetActive(true);
         
