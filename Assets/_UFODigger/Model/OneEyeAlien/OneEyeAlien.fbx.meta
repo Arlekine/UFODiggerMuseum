@@ -1,9 +1,39 @@
 fileFormatVersion: 2
 guid: d427ec2eed0a3ee488b3eb779cc1aaee
 ModelImporter:
-  serializedVersion: 20200
+  serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cornia1
+    second: {fileID: 2100000, guid: 07876bbe397c3364494c7827a3411092, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Nails1
+    second: {fileID: 2100000, guid: 7fb01fae447c80a4faa07c2b5d4d8b14, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Skin1
+    second: {fileID: 2100000, guid: f3577b77dc0c6904f99c8c1ac895118e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tongue1
+    second: {fileID: 2100000, guid: 4e84fe07f2dd25b4d8ab959bbfbcca6d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: eyeball1
+    second: {fileID: 2100000, guid: e83e8a82fe974e44eb0210ea85587810, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: teeth1
+    second: {fileID: 2100000, guid: 7f31b259a66084b4587b11fc9ce6d89c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -14,6 +44,7 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -43,6 +74,7 @@ ModelImporter:
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    nodeNameCollisionStrategy: 0
     fileIdsGeneration: 2
     swapUVChannels: 0
     generateSecondaryUV: 0
@@ -54,6 +86,7 @@ ModelImporter:
     skinWeightsMode: 0
     maxBonesPerVertex: 4
     minBoneWeight: 0.001
+    optimizeBones: 1
     meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
@@ -96,6 +129,7 @@ ModelImporter:
   humanoidOversampling: 1
   avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

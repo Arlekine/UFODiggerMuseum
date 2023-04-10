@@ -18,6 +18,7 @@ public class GiftController : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI _visitorCountText;
     [SerializeField] private TextMeshProUGUI _visitorCounter;
+    [SerializeField] private CameraMove cameraMove; 
 
     [SerializeField] private Button _giftWindowActivateButton;
     [SerializeField] private Button _declineGift;
@@ -101,18 +102,21 @@ public class GiftController : MonoBehaviour
 
     private void OpenGiftWindow()
     {
+        cameraMove.TurnOffMouseCameraControl();
         _giftWindow.SetActive(true);
         _giftIcon.SetActive(false);
     }
 
     private void DeclineGift()
     {
+        cameraMove.TurnOnMouseCameraControl();
         _giftWindow.SetActive(false);
         _giftIcon.SetActive(true);
     }
 
     private void AcceptGift()
     {
+        cameraMove.TurnOnMouseCameraControl();
         _adsManager.ShowRewardedAds(ADSManager.RewordTypes.visitor);
         _giftWindow.SetActive(false);
     }

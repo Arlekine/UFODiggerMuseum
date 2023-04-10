@@ -23,7 +23,7 @@ public class InstrumentChoise : MonoBehaviour
             SetInstrument();
         }
         
-        InstrumentIcon.sprite = _instrumentToset.GetInstrumentData().Icon;
+        //InstrumentIcon.sprite = _instrumentToset.GetInstrumentData().Icon;
         
         if (!_instrumentToset.GetInstrumentData().IsInstrumentUnlock)
         {
@@ -33,7 +33,7 @@ public class InstrumentChoise : MonoBehaviour
 
     private void SetInstrument()
     {
-        _instrumentBackgroundImage.color = _choiseColor;
+        //_instrumentBackgroundImage.color = _choiseColor;
         _playerInstrument.SetInstrument(_instrumentToset);
 
         for (int i = 0; i < _anotherInstruments.Length; i++)
@@ -44,6 +44,6 @@ public class InstrumentChoise : MonoBehaviour
 
     public void UnsetInstrument()
     {
-        _instrumentBackgroundImage.color = _unchoiseColor;
+        //_instrumentBackgroundImage.color = _unchoiseColor;
     }
 }

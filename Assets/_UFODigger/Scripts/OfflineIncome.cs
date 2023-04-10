@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class OfflineIncome : MonoBehaviour
 {
     public int GoldByMinute;
+    public int AdditionalGoldForRobot;
     public int MaximumOfflineIncome;
     public int MinimumOfflineIncome;
 
@@ -31,7 +32,9 @@ public class OfflineIncome : MonoBehaviour
         if (PlayerData.OfflineTime != TimeSpan.Zero || PlayerData.AbandonedGold>0)
         {
             var totalOfflineMinutes = PlayerData.OfflineTime.TotalMinutes;
-            _income = GoldByMinute * (int)totalOfflineMinutes + PlayerData.AbandonedGold;
+            var robotGold = PlayerData.IsRobotWasActiveBeforeQuitting ? AdditionalGoldForRobot : 0;
+
+            _income = (GoldByMinute + robotGold) * (int)totalOfflineMinutes + PlayerData.AbandonedGold;
             Debug.Log("_income - " + _income);
             if (_income > MinimumOfflineIncome)
             {

@@ -31,7 +31,7 @@ public class PlayerInstrument : MonoBehaviour
         if (_oldInstrument)
         {
             _instrument = _oldInstrument;
-            _skillsBag.RemoveSkill(_dinamiteData as ISkill);
+            //_skillsBag.RemoveSkill(_dinamiteData as ISkill);
         }
     }
 

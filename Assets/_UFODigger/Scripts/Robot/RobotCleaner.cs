@@ -6,8 +6,10 @@ using UnityEngine.AI;
 public class RobotCleaner : MonoBehaviour
 {
     public InstrumentData RobotData;
+    public PLayerData PlayerData;
     public GameObject Robot;
     public CapsuleCollider Collider;
+    public int MinutesOfWorking;
     public Stand TargetStand { get; private set; }
     public StateMachine StateMachine { get; private set; }
     public Vector3 MoveStandPoint { get; set; } = Vector3.zero;
@@ -16,6 +18,8 @@ public class RobotCleaner : MonoBehaviour
     private NavMeshAgent _navMeshAgent;
 
     private bool _IsRobotStart;
+    private Vector3 _standartPos;
+
 
     private void Awake()
     {
@@ -27,22 +31,12 @@ public class RobotCleaner : MonoBehaviour
 
     private void Start()
     {
-        /*if (RobotData.IsInstrumentUnlock && !_IsRobotStart)
-        {
-            _IsRobotStart = true;
-            SetupStates();
-            Robot.SetActive(true);
-            Collider.enabled = true;
-
-            _navMeshAgent.speed = RobotData.Upgrades[RobotData.LevelOfUpgrade].Power[0];
-        }
-
-        RobotData.OnLevelRise.AddListener(OnRobotUpgrade);*/
+        _standartPos = transform.position;
     }
 
     private void OnRobotUpgrade()
     {
-        /*if (RobotData.IsInstrumentUnlock && !_IsRobotStart)
+        if (RobotData.IsInstrumentUnlock && !_IsRobotStart)
         {
             _IsRobotStart = true;
             SetupStates();
@@ -50,7 +44,7 @@ public class RobotCleaner : MonoBehaviour
             Collider.enabled = true;
         }
 
-        _navMeshAgent.speed = (RobotData.Upgrades[RobotData.LevelOfUpgrade].Power[0]); //power = speed*/
+        _navMeshAgent.speed = (RobotData.Upgrades[RobotData.LevelOfUpgrade].Power[0]); //power = speed
     }
 
     [EditorButton]
@@ -94,6 +88,14 @@ public class RobotCleaner : MonoBehaviour
         if (StateMachine != null)
         {
             StateMachine.Tick();
+        }
+
+        if (_IsRobotStart && PlayerData.IsRobotActive == false)
+        {
+            StateMachine = null;
+            _IsRobotStart = false;
+            Collider.enabled = false;
+            _navMeshAgent.SetDestination(_standartPos);
         }
     }
 

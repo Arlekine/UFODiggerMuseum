@@ -255,8 +255,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RobotData: {fileID: 11400000, guid: 361eefdd05c72c44c98f0b2e97dbfdc6, type: 2}
+  PlayerData: {fileID: 0}
   Robot: {fileID: 8311949983371001785}
   Collider: {fileID: 3228992859020919704}
+  MinutesOfWorking: 5
 --- !u!114 &8804565504412234085
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -153,7 +153,8 @@ public class Visitor : MonoBehaviour
 
     private void Update()
     {
-        StateMachine.Tick();
+        if (StateMachine != null)
+            StateMachine.Tick();
 
         if (_animator != null && _navMeshAgent != null)
         {

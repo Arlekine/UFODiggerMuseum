@@ -10,13 +10,15 @@ public class ADSManager : MonoBehaviour
     [SerializeField] private int _giftTurnForAds;
     [SerializeField] private Bus _bus;
     [SerializeField] private GiftController _giftController;
+    [SerializeField] private RobotButton _robotCleanerButton;
 
     public enum RewordTypes
     {
         noReward = -1,
         visitor,
         excavationTurns,
-        Bomb
+        Bomb,
+        Robot
     };
 
     private RewordTypes _rewordType = RewordTypes.noReward;
@@ -42,6 +44,11 @@ public class ADSManager : MonoBehaviour
     public void ShowRewardedAds(RewordTypes rewordType)
     {
         _rewordType = rewordType;
+
+        if (rewardedAd_AdMob == null)
+            print("!!! - rewardedAd_AdMob == null");
+        else
+            print("!!! - rewardedAd_AdMob NE null");
 
         //rewardedAd_UnityAd.ShowAd();
         rewardedAd_AdMob.ShowAd();
@@ -81,6 +88,15 @@ public class ADSManager : MonoBehaviour
 
                 if (_excavation != null)
                     _excavation.SetDinamite();
+
+                break;
+
+            case RewordTypes.Robot:
+
+                Debug.Log("Add robot");
+
+                if (_robotCleanerButton != null)
+                    _robotCleanerButton.ActivateRobot();
 
                 break;
             default:

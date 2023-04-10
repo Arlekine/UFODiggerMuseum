@@ -48,6 +48,7 @@ public class PlayerExcavationTurns : MonoBehaviour
             }
             else
             {
+                BlockTurns();
                 StartCoroutine(ShowGiftOfferDelay());
             }
         }

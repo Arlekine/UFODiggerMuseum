@@ -26,6 +26,11 @@ public class RewardedAd_AdMob : MonoBehaviour
 
     public void ShowAd()
     {
+        if (rewardedAd == null)
+            print("!!! - rewardedAd == null");
+        else
+            print("!!! - rewardedAd NE null");
+
         if (rewardedAd.IsLoaded())
         {
             rewardedAd.Show();
