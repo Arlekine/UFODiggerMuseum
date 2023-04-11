@@ -187,6 +187,7 @@ public class AlienPart : MonoBehaviour
             }
         }
 
+        SoundManager.Instance.PlayAlienPartFound();
         _alien.IsAlienOpen = alienOpen;
         _alien.SaveAlienData();
         SavePartsStatus();

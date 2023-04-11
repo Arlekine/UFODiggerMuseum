@@ -20,6 +20,7 @@ public class Coin : MonoBehaviour
     public float CollectRadius = 5f;
     public float ZOffset;
     public float YOffset;
+
     private Vector3 _startPosition;
     private GameObject _vfx;
 
@@ -93,6 +94,7 @@ public class Coin : MonoBehaviour
         {
             MMVibrationManager.Haptic(HapticTypes.MediumImpact);
         }
+        SoundManager.Instance.PlayCoinCollect();
 
         foreach (var hitCollider in hitColliders)
         {

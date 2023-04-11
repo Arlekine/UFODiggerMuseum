@@ -173,7 +173,8 @@ public class GalaryScene : MonoBehaviour
                 RotateController.GetComponent<Animation>().Play();
                 RotateController.enabled = false;
                 RotateController.GetComponent<AlienRotateAnimation>().OnRotateComplete += OnRotateComplete;
-                
+
+                SoundManager.Instance.PlayAlienComplete();
                 UICollectAlien.Init(_alienPart.GetAlien());
             }
             else

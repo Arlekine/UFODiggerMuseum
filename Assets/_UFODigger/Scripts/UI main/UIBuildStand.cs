@@ -56,6 +56,8 @@ public class UIBuildStand : MonoBehaviour
             Debug.LogWarning("No reference on stand for build!");
             return;
         }
+
+        SoundManager.Instance.PlayNewStand();
         _uiOpenMuseumArea.Hide();
         _stand.Build();
         CloseWindow();

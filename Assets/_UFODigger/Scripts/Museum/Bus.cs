@@ -23,6 +23,7 @@ public class Bus : MonoBehaviour
     public Transform EndPoint;
 
     public BusVisitorDetector VisitorDetector;
+    public AudioSource AudioSource;
 
     private Vector3 _busScale;
     private const float _busYScaleFactor = 0.5f;
@@ -52,6 +53,7 @@ public class Bus : MonoBehaviour
 
     public void StartBus()
     {
+        AudioSource.Play();
         VisitorExitBus = 0;
         StartCoroutine(Move(StartPoint.position, MuseumPoint.position, true));
 

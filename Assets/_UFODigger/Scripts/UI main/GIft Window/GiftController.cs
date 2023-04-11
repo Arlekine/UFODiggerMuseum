@@ -28,6 +28,8 @@ public class GiftController : MonoBehaviour
     [SerializeField] private GameObject _counter;
     [SerializeField] private GameObject _giftIcon;
     [SerializeField] private ADSManager _adsManager;
+    [SerializeField] private CanvasGroup _canvasGroup;
+
     private void Start()
     {
         var totalVisitors = 0;
@@ -59,6 +61,13 @@ public class GiftController : MonoBehaviour
 
         ChangeCounter();
         HideCounter();
+    }
+
+    private void Update()
+    {
+        _canvasGroup.alpha = (Ads.IsRewardedAdReady()) ? 1f : 0f;
+        _canvasGroup.blocksRaycasts = Ads.IsRewardedAdReady();
+        _canvasGroup.ignoreParentGroups = Ads.IsRewardedAdReady();
     }
 
     public void ShowCounter()

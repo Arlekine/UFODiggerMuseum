@@ -53,7 +53,12 @@ public class Excavation : Singleton<Excavation>
         //return old instrument after use dinamite
         if (_playerInstrument.IsOneTurnInstrument)
         {
+            SoundManager.Instance.PlayBomb();
             _playerInstrument.ReturnOldInstrument();
+        }
+        else
+        {
+            SoundManager.Instance.PlayIceBreak();
         }
 
         var instrumentPower = instrument.GetPartPower();

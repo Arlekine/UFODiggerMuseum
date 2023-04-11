@@ -23,21 +23,9 @@ public class ADSManager : MonoBehaviour
 
     private RewordTypes _rewordType = RewordTypes.noReward;
 
-
-    public InterstitialAd_UnityAd interstitialAd_UnityAd;
-    public RewardedAd_UnityAd rewardedAd_UnityAd;
-
-    public InterstitialAd_AdMob interstitialAd_AdMob;
-    public RewardedAd_AdMob rewardedAd_AdMob;
-
-
     private void Start()
     {
-        rewardedAd_UnityAd.LoadAd();
-        rewardedAd_UnityAd.dSManager = this;
-
-        interstitialAd_AdMob.dSManager = this;
-        rewardedAd_AdMob.dSManager = this;
+        Ads.PreloadInterstitial();
     }
 
     ///// SHOW REWARDED /////
@@ -45,13 +33,11 @@ public class ADSManager : MonoBehaviour
     {
         _rewordType = rewordType;
 
-        if (rewardedAd_AdMob == null)
-            print("!!! - rewardedAd_AdMob == null");
-        else
-            print("!!! - rewardedAd_AdMob NE null");
-
         //rewardedAd_UnityAd.ShowAd();
-        rewardedAd_AdMob.ShowAd();
+        Ads.ShowRewarded("", (result) =>
+        {
+            if (result == AdResult.Finished) Reward();
+        });
     }
     /////////////////////////
 
@@ -60,7 +46,7 @@ public class ADSManager : MonoBehaviour
     public void ShowInterstitialAds()
     {
         //interstitialAd_UnityAd.ShowAd();
-        interstitialAd_AdMob.ShowAd();
+        Ads.ShowInterstitial("");
     }
     /////////////////////////
 

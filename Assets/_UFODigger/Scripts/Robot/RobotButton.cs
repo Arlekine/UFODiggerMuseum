@@ -17,6 +17,8 @@ public class RobotButton : MonoBehaviour
     [SerializeField] private Animation _buttonAnimation;
     [SerializeField] private CameraMove cameraMove;
 
+    private bool _isButtonActive;
+
     private void Start()
     {
         gameObject.SetActive(false);
@@ -30,6 +32,13 @@ public class RobotButton : MonoBehaviour
 
     private void Update()
     {
+        if (_isButtonActive == false)
+            return;
+
+        _canvasGroup.alpha = (Ads.IsRewardedAdReady()) ? 1f : 0f;
+        _canvasGroup.blocksRaycasts = Ads.IsRewardedAdReady();
+        _canvasGroup.ignoreParentGroups = Ads.IsRewardedAdReady();
+
         if (_pLayerData.IsRobotActive)
         {
             TimeSpan expireSpan = (_pLayerData.RobotExpireTime - DateTime.Now);
@@ -60,6 +69,8 @@ public class RobotButton : MonoBehaviour
             _buyParts.SetActive(true);
             _activeParts.SetActive(false);
         }
+
+        _isButtonActive = true;
     }
 
     public void ButtonClick()

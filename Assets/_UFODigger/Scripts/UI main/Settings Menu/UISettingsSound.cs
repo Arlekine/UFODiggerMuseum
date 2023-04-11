@@ -27,6 +27,7 @@ public class UISettingsSound : MonoBehaviour
     {
         _soundStatus = !_soundStatus;
         ChangeSoundText(_soundStatus);
+        AudioListener.volume = _soundStatus ? 1f : 0f;
         Save();
     }
 
@@ -55,6 +56,8 @@ public class UISettingsSound : MonoBehaviour
         {
             _soundStatus = true;
         }
+
+        AudioListener.volume = _soundStatus ? 1f : 0f;
     }
 
     private void Save()
