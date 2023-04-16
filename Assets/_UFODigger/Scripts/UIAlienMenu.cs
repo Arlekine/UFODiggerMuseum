@@ -6,7 +6,7 @@ public class UIAlienMenu : Singleton<UIAlienMenu>
     private Animation _animation;
     public Stand AlienOnStand;
 
-    public GameObject MapButton;
+    //public GameObject MapButton;
     public GameObject ExcavateButton;
     
     public Alien OpenMenuButtonAfterAlien;
@@ -63,12 +63,12 @@ public class UIAlienMenu : Singleton<UIAlienMenu>
     public void ShowMap()
     {
         ExcavateButton.SetActive(false);
-        MapButton.SetActive(true);
+        //MapButton.SetActive(true);
     }
     
     public void ShowExcavate()
     {
         ExcavateButton.SetActive(true);
-        MapButton.SetActive(false);
+        //MapButton.SetActive(false);
     }
 }

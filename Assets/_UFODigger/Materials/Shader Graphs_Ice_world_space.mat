@@ -26,7 +26,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_5D588FDB:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: f3656ebafce1aa94aa936afa02f7a8af, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_74D3EB4D:
@@ -62,21 +62,23 @@ Material:
     - Vector1_286DDC9D: 0.5
     - Vector1_3717E3AD: 0
     - Vector1_3C972B2F: 0
-    - Vector1_CC98B2D8: 0.6
+    - Vector1_CC98B2D8: 0
     - _AlphaClip: 0
     - _Blend: 0
     - _Cull: 2
     - _Cutoff: 0
     - _DstBlend: 0
+    - _NormalHight: 0.03
     - _QueueControl: 0
     - _QueueOffset: 50
     - _SampleGI: 0
     - _SrcBlend: 1
+    - _Streshing: 1
     - _Surface: 0
     - _ZWrite: 1
     m_Colors:
-    - Color_4E765476: {r: 1, g: 1, b: 1, a: 0}
-    - Color_A8BB05A8: {r: 0.48967603, g: 0.659231, b: 0.7924528, a: 0}
+    - Color_4E765476: {r: 0, g: 0, b: 0, a: 0}
+    - Color_A8BB05A8: {r: 0.7735849, g: 0.7735849, b: 0.7735849, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_BuildTextureStacks: []

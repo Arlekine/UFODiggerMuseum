@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.3708985, g: 0.3783704, b: 0.35722548, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 4890085278179872738, guid: 22885395124774dec89b1c4fef1e5044, type: 2}
+  m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -885,7 +885,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   admobInterstitialID: ca-app-pub-3890298572306120/9374521434
   admobRewardedID: ca-app-pub-3890298572306120/8001730012
-  gameID: 4649173
+  gameID: 5248355
   unityInterstitialID: Interstitial_Android
   unityRewardedID: Rewarded_Android
 --- !u!1 &1092324750

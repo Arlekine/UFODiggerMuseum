@@ -12,8 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: greenfroggames
-  productName: UFO Diggers
+  companyName: EnotGames
+  productName: 'UFO Diggers : Idle Museum'
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0, g: 0, b: 0, a: 1}
@@ -155,7 +155,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: greenfroggames.ufo.diggers
+    Android: com.EnotGames.UFODiggersIdleMuseum
     iPhone: com.greenfroggames.UFODiggers
   buildNumber:
     Standalone: 0
@@ -891,7 +891,7 @@ PlayerSettings:
     Build: 0
     Collab: 0
     Game Performance: 0
-    Purchasing: 1
+    Purchasing: 0
     UDP: 0
     UNet: 1
     Unity Ads: 1
@@ -909,10 +909,10 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: e415f276-d0a7-414e-9559-dae4f3413c59
+  cloudProjectId: 3206d0f3-8b68-4388-a13b-b7920f61518b
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: UFO Diggers
+  projectName: 'UFO Diggers : Idle Museum'
   organizationId: r-l
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0

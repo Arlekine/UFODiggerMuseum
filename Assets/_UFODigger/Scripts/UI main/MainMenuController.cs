@@ -6,7 +6,7 @@ using Utils;
 public class MainMenuController : Singleton<MainMenuController>
 {
     public GameObject MainMenu;
-    public GameObject StandsMenu;
+    //public GameObject StandsMenu;
     public GameObject AlienMenu;
     public GameObject SettingsButton;
 
@@ -24,7 +24,7 @@ public class MainMenuController : Singleton<MainMenuController>
     {
         MainMenu.SetActive(true);
         SettingsButton.SetActive(true);
-        StandsMenu.SetActive(false);
+        //StandsMenu.SetActive(false);
         AlienMenu.SetActive(false);
 
         CameraMove.Instance.TurnOnMouseCameraControl();
@@ -40,7 +40,7 @@ public class MainMenuController : Singleton<MainMenuController>
     {
         MainMenu.SetActive(false);
         SettingsButton.SetActive(false);
-        StandsMenu.SetActive(true);
+        //StandsMenu.SetActive(true);
         AlienMenu.SetActive(false);
 
         CameraMove.Instance.TurnOnMouseCameraControl();
@@ -69,7 +69,7 @@ public class MainMenuController : Singleton<MainMenuController>
 
         MainMenu.SetActive(false);
         SettingsButton.SetActive(false);
-        StandsMenu.SetActive(false);
+        //StandsMenu.SetActive(false);
         AlienMenu.SetActive(true);
         
         CameraMove.Instance.TurnOffMouseCameraControl();

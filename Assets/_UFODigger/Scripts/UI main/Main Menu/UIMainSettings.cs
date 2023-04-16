@@ -13,7 +13,10 @@ public class UIMainSettings : MonoBehaviour
 
     private void OpenSettingsMenu()
     {
-        _uiSettings.ShowSettingsMenu();
-        _uiMainMenu.HideMainMenu();
+        if(_uiSettings)
+            _uiSettings.ShowSettingsMenu();
+
+        if(_uiMainMenu)
+            _uiMainMenu.HideMainMenu();
     }
 }
