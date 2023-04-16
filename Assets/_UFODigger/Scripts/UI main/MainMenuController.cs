@@ -11,9 +11,6 @@ public class MainMenuController : Singleton<MainMenuController>
     public GameObject SettingsButton;
 
     public UISettings SettingsMenu;
-    public ShopManager ShopMenu;
-
-    public UIWiki Wiki;
 
     private Stand[] stands;
 
