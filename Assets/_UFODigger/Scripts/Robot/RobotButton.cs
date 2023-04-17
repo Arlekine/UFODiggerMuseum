@@ -21,11 +21,9 @@ public class RobotButton : MonoBehaviour
 
     private void Start()
     {
-        gameObject.SetActive(false);
+        _canvasGroup.alpha = 0f;
         if (_pLayerData.IsTutorialComplete)
         {
-            gameObject.SetActive(true);
-            _canvasGroup.alpha = 0f;
             StartCoroutine(WaitForGiftsDelay());
         }
     }
