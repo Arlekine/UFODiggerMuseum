@@ -47,6 +47,8 @@ public class ExcavateComplete : MonoBehaviour
 
             _playerTurnsUI.HideGiftOffer();
 
+            SoundManager.Instance.PlayWin();
+
             //AppMetricaManager.instance.LevelProgress(_levelNum, "Win");
             StartCoroutine(DelayBeforeMoveToNewScene(DelayBeforeWin));
         }

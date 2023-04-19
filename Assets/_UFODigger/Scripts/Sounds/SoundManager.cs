@@ -1,10 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Utils;
 
 public class SoundManager : Singleton<SoundManager>
 {
+    [SerializeField] private AudioSource _uiClickCoinSound;
     [SerializeField] private AudioSource _uiClickSound;
     [SerializeField] private AudioSource _coinCollect;
     [SerializeField] private AudioSource _iceBreak;
@@ -12,10 +11,16 @@ public class SoundManager : Singleton<SoundManager>
     [SerializeField] private AudioSource _alienPart;
     [SerializeField] private AudioSource _alienComplete;
     [SerializeField] private AudioSource _newStand;
+    [SerializeField] private AudioSource _Win;
 
     public void PlayUIClick()
     {
         _uiClickSound.Play();
+    }
+
+    public void PlayUIClickCoin()
+    {
+        _uiClickCoinSound.Play();
     }
 
     public void PlayCoinCollect()
@@ -25,6 +30,7 @@ public class SoundManager : Singleton<SoundManager>
 
     public void PlayIceBreak()
     {
+        _iceBreak.pitch = Random.Range(0.9f, 1.1f);
         _iceBreak.Play();
     }
 
@@ -46,5 +52,10 @@ public class SoundManager : Singleton<SoundManager>
     public void PlayNewStand()
     {
         _newStand.Play();
+    }
+
+    public void PlayWin()
+    {
+        _Win.Play();
     }
 }

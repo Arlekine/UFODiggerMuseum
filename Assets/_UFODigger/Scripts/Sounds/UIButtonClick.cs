@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class UIButtonClick : MonoBehaviour
 {
+    public bool _GetCoinButton;
     private Button _button;
 
     private Button Button
@@ -33,6 +34,9 @@ public class UIButtonClick : MonoBehaviour
 
     private void PlaySound()
     {
-        SoundManager.Instance.PlayUIClick();
+        if(_GetCoinButton)
+            SoundManager.Instance.PlayUIClickCoin();
+        else
+            SoundManager.Instance.PlayUIClick();
     }
 }

@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-using EPOOutline;
 using MoreMountains.NiceVibrations;
 
 public class FoundPart : MonoBehaviour
@@ -62,16 +61,7 @@ public class FoundPart : MonoBehaviour
 
         _partOffset = part.Part.GetComponent<PartForExcavate>().PartInPosition;
         var partObject = part.Part.GetComponent<PartForExcavate>().partObject;
-        if (partObject.transform.parent.TryGetComponent<Outlinable>(out var outlinable))
-        {
-            outlinable.enabled = true;
-          
-        }
-        else
-        {
-            Debug.LogWarning($"On part not set Outlinable component.");
-        }
-
+        
         SetAlienFounded(part);
         AlienForExcavate.FoundedParts.Add(part.ExcavatePart);
         AlienForExcavate.Save();
@@ -136,14 +126,6 @@ public class FoundPart : MonoBehaviour
 
     IEnumerator MoveDown(GameObject alienPart, BoxesFoAlienPart box, int partSize = 0)
     {
-        if (alienPart.transform.parent.TryGetComponent<Outlinable>(out var outlinable))
-        {
-            outlinable.enabled = false;
-        }
-        else
-        {
-            Debug.LogWarning($"On part not set Outlinable component.");
-        }
 
         box.CharacterAnimator.SetTrigger(Like);
         var boxTransform = box.StandForFoundItem.gameObject.transform;

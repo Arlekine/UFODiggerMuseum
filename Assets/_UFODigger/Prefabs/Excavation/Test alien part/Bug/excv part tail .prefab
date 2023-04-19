@@ -1,17 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &1390780865524530039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2144781824012197151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 034bc47afcbf5e141a58d5c20b7808e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &3971505835144559222
 GameObject:
   m_ObjectHideFlags: 0
@@ -41,6 +29,7 @@ Transform:
   m_LocalRotation: {x: -0.99805063, y: -0, z: -0, w: 0.062409107}
   m_LocalPosition: {x: -0.2333, y: 0.1721, z: -0.104}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 408240968782907976}
   m_RootOrder: 0
@@ -64,6 +53,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -116,7 +106,6 @@ GameObject:
   m_Component:
   - component: {fileID: 408240968782907976}
   - component: {fileID: 5397706970829348232}
-  - component: {fileID: 3783867660296623009}
   m_Layer: 0
   m_Name: 'excv part tail '
   m_TagString: Untagged
@@ -134,6 +123,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.389, y: 0.239, z: 0.159}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4450610447896760017}
   - {fileID: 5590833097330560809}
@@ -152,90 +142,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 012f05a2a5a886f4cb07d3942a403639, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PartInPosition: {x: 0, y: 0, z: 0}
   PartPositions:
   - RelativePosition: 0000000000000000
   FirstSotaInPartPosition: {fileID: 6546000962044203297}
   partObject: {fileID: 3971505835144559222}
   IsNewPart: 1
---- !u!114 &3783867660296623009
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8856411106157264348}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fe91dc294731a9428c0941ea7579110, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  complexMaskingMode: 0
-  drawingMode: 1
-  outlineLayer: 0
-  outlineTargets:
-  - IsVisible: 1
-    CutoutMask: 8
-    edgeDilateAmount: 5
-    frontEdgeDilateAmount: 5
-    backEdgeDilateAmount: 5
-    renderer: {fileID: 3645191896131339778}
-    SubmeshIndex: 0
-    BoundsMode: 0
-    Bounds:
-      m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.5, y: 0.5, z: 0.5}
-    CutoutThreshold: 0.5
-    CullMode: 2
-    cutoutTextureName: 
-    DilateRenderingMode: 0
-    cutoutTextureIndex: 0
-  - IsVisible: 0
-    CutoutMask: 8
-    edgeDilateAmount: 5
-    frontEdgeDilateAmount: 5
-    backEdgeDilateAmount: 5
-    renderer: {fileID: 7534673989966246174}
-    SubmeshIndex: 0
-    BoundsMode: 0
-    Bounds:
-      m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.5, y: 0.5, z: 0.5}
-    CutoutThreshold: 0.5
-    CullMode: 2
-    cutoutTextureName: 
-    DilateRenderingMode: 0
-    cutoutTextureIndex: 0
-  renderStyle: 2
-  outlineParameters:
-    enabled: 1
-    color: {r: 0, g: 0, b: 0, a: 1}
-    dilateShift: 0.37
-    blurShift: 0
-    fillPass:
-      shader: {fileID: 4800000, guid: 213090e563021044c92d1c27258b93f0, type: 3}
-      serializedProperties:
-      - PropertyName: _PublicColor
-        Property:
-          ColorValue: {r: 0, g: 1, b: 0.5332718, a: 0.6862745}
-          FloatValue: 0
-          VectorValue: {x: 0, y: 0, z: 0, w: 0}
-          PropertyType: 0
-  backParameters:
-    enabled: 0
-    color: {r: 1, g: 0.015686274, b: 0.06288016, a: 1}
-    dilateShift: 1
-    blurShift: 1
-    fillPass:
-      shader: {fileID: 0}
-      serializedProperties: []
-  frontParameters:
-    enabled: 1
-    color: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-    dilateShift: 1
-    blurShift: 1
-    fillPass:
-      shader: {fileID: 0}
-      serializedProperties: []
 --- !u!1001 &7533086528541548108
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -301,23 +213,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52f38e5fe2660b045b97d3c0257adcf3, type: 3}
---- !u!4 &5590833097330560809 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2674090746715132261, guid: 52f38e5fe2660b045b97d3c0257adcf3, type: 3}
-  m_PrefabInstance: {fileID: 7533086528541548108}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2144781824012197151 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8451336743458292563, guid: 52f38e5fe2660b045b97d3c0257adcf3, type: 3}
   m_PrefabInstance: {fileID: 7533086528541548108}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1390780865524530039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2144781824012197151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 034bc47afcbf5e141a58d5c20b7808e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &5590833097330560809 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2674090746715132261, guid: 52f38e5fe2660b045b97d3c0257adcf3, type: 3}
+  m_PrefabInstance: {fileID: 7533086528541548108}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6546000962044203297 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3626232746801450861, guid: 52f38e5fe2660b045b97d3c0257adcf3, type: 3}
-  m_PrefabInstance: {fileID: 7533086528541548108}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &7534673989966246174 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 7437491480031058, guid: 52f38e5fe2660b045b97d3c0257adcf3, type: 3}
   m_PrefabInstance: {fileID: 7533086528541548108}
   m_PrefabAsset: {fileID: 0}
