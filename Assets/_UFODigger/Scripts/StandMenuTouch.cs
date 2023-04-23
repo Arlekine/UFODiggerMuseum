@@ -33,6 +33,7 @@ public class StandMenuTouch : MonoBehaviour
         
         if (!PlayerData.IsTutorialComplete)
         {
+            gameObject.SetActive(false);
             FindObjectOfType<TutorialManager>().NextTutorialTurn();
             //AppMetricaManager.instance.TutorialState("Click to stand");
         }

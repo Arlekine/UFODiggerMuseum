@@ -60,20 +60,31 @@ public class ADSManager : MonoBehaviour
                 Debug.Log("Add people in museum");
                 //AppsFlyerManager.instance.AdPlacement("Add people in museum");
                 if (_bus != null)
+                {
                     _bus.StartBus();
+                    Analitics.Instance.SendEvent("bus_activated");
+                }
+
                 break;
             case RewordTypes.excavationTurns:
                 Debug.Log("Add turns in excavation");
                 //AppsFlyerManager.instance.AdPlacement("Add turns in excavation");
                 if (_playerExcavationTurns != null)
+                {
                     _playerExcavationTurns.AddTurns(_giftTurnForAds);
+                    Analitics.Instance.SendEvent("additional_turns_added");
+                }
+
                 break;
             case RewordTypes.Bomb:
 
                 Debug.Log("Add bomb");
 
                 if (_excavation != null)
+                {
                     _excavation.SetDinamite();
+                    Analitics.Instance.SendEvent("bomb_activated");
+                }
 
                 break;
 
@@ -82,7 +93,10 @@ public class ADSManager : MonoBehaviour
                 Debug.Log("Add robot");
 
                 if (_robotCleanerButton != null)
+                {
                     _robotCleanerButton.ActivateRobot();
+                    Analitics.Instance.SendEvent("robot_activated");
+                }
 
                 break;
             default:

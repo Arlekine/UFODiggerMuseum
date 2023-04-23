@@ -26,6 +26,9 @@ public class UIExcavationPrice : MonoBehaviour
         {
             if (PlayerData.GoldCount >= Alien.ExcavationPrice)
             {
+                Alien.Excavations++;
+                Alien.SaveAlienData();
+
                 OnExcavationStart.Invoke(Alien);
                 PlayerData.AddGold(-Alien.ExcavationPrice);
                 SceneManager.LoadScene(2);

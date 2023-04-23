@@ -38,9 +38,17 @@ public class Ads : MonoBehaviour, IUnityAdsInitializationListener, IUnityAdsLoad
 
 	private void Awake()
 	{
-		_instance = this;
+        if (_instance == null)
+        {
+            _instance = this;
+        }
+        else if (_instance != this)
+        {
+			Destroy(this);
+			return;
+        }
 
-		MobileAds.Initialize(_ => OnInitializationComplete());
+        MobileAds.Initialize(_ => OnInitializationComplete());
 		Advertisement.Initialize(gameID, Application.isEditor, this);
 		DontDestroyOnLoad(this);
 	}
@@ -274,12 +282,15 @@ public class Ads : MonoBehaviour, IUnityAdsInitializationListener, IUnityAdsLoad
 
 	private void OnDestroy()
 	{
-		RemoveAds();
-		_isInitialized = false;
-		_admobInterstitial = null;
-		ResetAdMobRewarded();
-		_isUnityInterstitialLoaded = false;
-		_isUnityRewardedLoaded = false;
-		_instance = null;
-	}
+        if (_instance == this)
+        {
+            RemoveAds();
+            _isInitialized = false;
+            _admobInterstitial = null;
+            ResetAdMobRewarded();
+            _isUnityInterstitialLoaded = false;
+            _isUnityRewardedLoaded = false;
+            _instance = null;
+        }
+    }
 }

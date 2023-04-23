@@ -30,6 +30,7 @@ public class Alien : ScriptableObject
     [HideInInspector]
     public bool IsAlienOpen;
     public bool IsAlienFirstTimeOpen;
+    public int Excavations;
 
     public void LoadAlienData()
     {
@@ -50,12 +51,22 @@ public class Alien : ScriptableObject
         {
             IsAlienFirstTimeOpen = false;
         }
+
+        if (SaveLoadSystem.CheckKey($"{Name}+Ex"))
+        {
+            Excavations = SaveLoadSystem.LoadInt($"{Name}+Ex");
+        }
+        else
+        {
+            Excavations = 0;
+        }
     }
     
     public void SaveAlienData()
     {
         SaveLoadSystem.Save($"{Name}",IsAlienOpen);
         SaveLoadSystem.Save($"{Name}+F",IsAlienFirstTimeOpen);
+        SaveLoadSystem.Save($"{Name}+Ex",Excavations);
     }
 }
 
