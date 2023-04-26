@@ -8,9 +8,7 @@ public class Analitics : Singleton<Analitics>
 {
     public void SendEvent(string eventName)
     {
-        AppMetrica.Instance.ReportEvent(
-            "level_start"
-        );
+        AppMetrica.Instance.ReportEvent(eventName);
 
         AppMetrica.Instance.SendEventsBuffer();
         print($"Analytics Event: {eventName}");
